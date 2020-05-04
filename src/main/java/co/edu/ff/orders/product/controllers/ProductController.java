@@ -26,12 +26,10 @@ public class ProductController {
         if(productOperation.isValid()){
             return ResponseEntity.ok(productOperation);
         }
-        else if(!productOperation.isValid()){
+        else {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST)
                     .body(productOperation);
         }
-        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
-                    .body(productOperation);
     }
 
     @GetMapping("/{id}")

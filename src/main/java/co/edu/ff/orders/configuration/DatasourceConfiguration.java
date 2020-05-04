@@ -15,15 +15,15 @@ import com.zaxxer.hikari.HikariDataSource;
 @Configuration
 public class DatasourceConfiguration {
 
-    @Bean
-    @Profile({"test"})
-    public DataSource testDatasource(){
-        return new EmbeddedDatabaseBuilder()
-                .setType(EmbeddedDatabaseType.H2)
-                .addScript("classpath:scripts/schema.sql")
-                //.addScript("classpath:scripts/data.sql")
-                .build();
-    }
+//    @Bean
+//    @Profile({"test"})
+//    public DataSource testDatasource(){
+//        return new EmbeddedDatabaseBuilder()
+//                .setType(EmbeddedDatabaseType.H2)
+//                .addScript("classpath:scripts/schema.sql")
+//                //.addScript("classpath:scripts/data.sql")
+//                .build();
+//    }
 
 
 

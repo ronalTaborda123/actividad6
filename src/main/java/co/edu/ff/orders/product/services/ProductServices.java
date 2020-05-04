@@ -7,19 +7,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import co.edu.ff.orders.product.domain.*;
-import co.edu.ff.orders.product.exceptions.ProductAlreadyExistsException;
 import co.edu.ff.orders.product.exceptions.ProductDoesNotExistsException;
 import co.edu.ff.orders.product.repositories.ProductRepository;
+import lombok.AllArgsConstructor;
 
 @Service
+@AllArgsConstructor
 public class ProductServices {
 
     private final ProductRepository productRepository;
 
-    @Autowired
-    public ProductServices(ProductRepository productRepository) {
-        this.productRepository = productRepository;
-    }
 
     public ProductOperation createProduct(ProductOperationRequest productOperationRequest){
             return productRepository.insertOne(productOperationRequest);
