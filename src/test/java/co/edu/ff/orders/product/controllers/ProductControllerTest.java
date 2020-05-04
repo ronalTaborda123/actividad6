@@ -47,8 +47,7 @@ class ProductControllerTest {
     @MockBean
     ProductServices service;
 
-    @MockBean
-    UserServices userservice;
+
 
     @Test
     void createProductFailure() throws Exception {
